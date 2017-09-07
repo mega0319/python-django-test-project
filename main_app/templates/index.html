@@ -1,0 +1,19 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TreasureGram</title>
+</head>
+<body>
+  <h1>TreasureGram</h1>
+  {% for treasure in treasures %}
+    <p>{{ treasure.name }}</p>
+    {% if treasure.value > 0 %}
+      <p>{{ treasure.value }}</p>
+    {% else %}
+      <p>Unknown</p>
+    {% endif %}
+  {% endfor %}
+</body>
+</html>
